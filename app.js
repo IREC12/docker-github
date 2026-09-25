@@ -4,7 +4,7 @@ const PORT = 3000;
 
 const servidor = http.createServer((req, res) => {
     res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end("¡Hola desde Docker!");
+    res.end("¡Hola desde Docker y GitHub Actions!");
 });
 
 servidor.listen(PORT, () => {
