@@ -29,6 +29,15 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
 
+      - name: Check Docker Build
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          push: false
+
+      - name: Check Docker Bake
+        run: docker buildx bake
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v7
         with:
